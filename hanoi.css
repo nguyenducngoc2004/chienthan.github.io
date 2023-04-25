@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #060606;
+}
+
+.border {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.border:before,
+.border:after {
+    content: "";
+    position: absolute;
+    width: calc(100%);
+    height: calc(100%);
+    border: 1px solid transparent;
+    pointer-events: none;
+}
+
+.border:before {
+    top: 0;
+    left: 0;
+    border-top-color: #56dced;
+    border-left-color: #43ffff;
+    transition: border-top-color 1s ease, border-left-color 1s ease;
+}
+
+.border:after {
+    bottom: 0;
+    right: 0;
+    border-bottom-color: #f65c41;
+    border-right-color: #f9be35;
+    transition: border-bottom-color 1s ease, border-right-color 1s ease;
+}
+
+.border.active:before {
+    border-top-color: #ff44dd;
+    border-left-color: #e83bff;
+}
+
+.border.active:after {
+    border-bottom-color: #e8ff1d;
+    border-right-color: #eeff38;
+}
+
+.header {
+    margin: 120px;
+  }
+   .gioithieu1,
+  .gioithieu {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 01.6;
+    display: block;
+    font-family: 'Serif';
+    width: 100%;
+  }
+  hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ảnh */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image-wrapper {
+    width: calc(33.33% - 2px);
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  .image-wrapper img {
+    display: block;
+    width: 263px;
+    height: 180px;
+    margin: 1px 133px 1px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .image-wrapper img:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .gioithieu1{
+    margin: 40px;
+  }
+  video{
+    margin-left: 40px;
+  }

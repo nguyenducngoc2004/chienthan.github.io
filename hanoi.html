@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hanoi.css">
+    <style type="text/css">
+        /* Định dạng background */
+
+
+        /* Định dạng hiệu ứng */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Định dạng hạt */
+        .particle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            -webkit-animation: particle 2s ease-in-out;
+            animation: particle 2s ease-in-out;
+            cursor: pointer;
+        }
+
+
+
+        /* Khai báo keyframes cho animation */
+        @-webkit-keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(100vw, 100vh);
+                transform: translate(100vw, 100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles"></div>
+    <!-- Nội dung trang web của bạn ở đây -->
+
+    <script type="text/javascript">
+        // Tạo các hạt ngẫu nhiên
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+        }
+
+        // Tạo hạt mới sau mỗi 0.1ms
+        setInterval(createParticle, 50);
+
+        /* Hàm tạo màu sắc ngẫu nhiên */
+        function randomColor() {
+            var colors = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388']
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        /* Tạo các hạt ngẫu nhiên */
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.background = randomColor();
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+
+        }
+
+        const border = document.querySelector('.border');
+
+        function toggleBorder() {
+            border.classList.toggle('active');
+        }
+
+        setInterval(toggleBorder, 5000);
+    </script>
+    <!--viem-->
+    <div class="border"></div>
+    </head>
+
+    <body>
+        <div id="main">
+
+            <div class="header">
+                <p class="gioithieu">
+                    Nhà văn Đoàn Minh Phượng đã có những trăn chở khôn nguôi về cuội nguồn của quê hương :
+                </p>
+
+                <p class="gioithieu">
+                    khi người ta bỏ đi cái dễ của mình thì cũng không thực sự bám rễ vào đâu được ....
+                </p>
+
+                <p class="gioithieu">
+                    ít khi có nỗi cô đơn nào lớn hơn nỗi cô đơn khi người ta tự cắt rời mình khỏi những năm tháng đầi
+                    tiên làm người của mình cắt dời khỏi cuội nguồn
+                </p>
+
+                <p class="gioithieu">
+                    quê hương hai tiếng thật gần gũi nhưng vô cùng thiêng liêng mà ai ai cũng mặc định rằng, đó là nơi
+                    chốn đón đợi con người ta trờ về.
+                </p>
+
+                <p class="gioithieu">
+                    và tôi cũng vậy tôi cũng có quê hương và đó là thứ mà tôi muốn giới thiệu Hà nội xứ sở tắc đường .
+                </p>
+
+                <p class="gioithieu">
+                    đầu tiên chúng ta phải hiểu hà nội là dì? vậy hà nội là dì, hà nội là mảnh đất ở phía trong sông thì
+                    được gọi là hà nội
+                </p>
+
+
+                <p class="gioithieu">
+                    và dưới đây là những gì em biết về hà nội.
+                </p>
+            </div>
+            <hr>
+
+            <div class="content">
+                <p class="gioithieu1"> địa lý :</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="/img/tải xuống.jpg" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/tải xuống (1).jpg" alt="Image 2">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/tải xuống (2).jpg" alt="Image 3">
+                    </div>
+                  </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="content">
+                <p class="gioithieu1"> lễ hội :</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="/img/lễ hội.jpg" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/lễ hội 1.jpg" alt="Image 2">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/lễ hội 2.jpg" alt="Image 3">
+                    </div>
+                  </div>
+            </div>
+
+
+
+            <br><br><br><br>
+
+            <div class="content">
+                <p class="gioithieu1"> phố phường :</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="/img/phố phường.jpg" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/phố phường 1.jpg" alt="Image 2">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/phố phường 2.jpg" alt="Image 3">
+                    </div>
+                  </div>
+            </div>
+
+
+            <br><br><br><br>
+
+            <div class="content">
+                <p class="gioithieu1"> ẩm thực :</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="/img/ẩm thực.jpg" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/ẩm thực 1.jpg" alt="Image 2">
+                    </div>
+                    <div class="image-wrapper">
+                      <img src="/img/ẩm thực 2.jpg" alt="Image 3">
+                    </div>
+                  </div>
+            </div>
+
+            <hr>
+            <br><br><br><br>
+            <div class="footer">
+                <p class="gioithieu1">nếu muốn biết thêm về hà nội thì hãy xen video sau nhé : </p>
+                <video  width="50%" height="50%" controls>
+                    <source src="/video/Hà Nội - Thủ Đô Ngàn Năm Văn Hiến - Từ Góc Nhìn Flycam.mp4">
+                  </video>
+            </div>
+        </div>
+    </body>
+
+</html>

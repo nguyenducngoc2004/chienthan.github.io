@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cntt.css">
+    <style type="text/css">
+        /* Định dạng background */
+
+
+        /* Định dạng hiệu ứng */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Định dạng hạt */
+        .particle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            -webkit-animation: particle 2s ease-in-out;
+            animation: particle 2s ease-in-out;
+            cursor: pointer;
+        }
+
+
+
+        /* Khai báo keyframes cho animation */
+        @-webkit-keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(100vw, 100vh);
+                transform: translate(100vw, 100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles"></div>
+    <!-- Nội dung trang web của bạn ở đây -->
+
+    <script type="text/javascript">
+        // Tạo các hạt ngẫu nhiên
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+        }
+
+        // Tạo hạt mới sau mỗi 0.1ms
+        setInterval(createParticle, 50);
+
+        /* Hàm tạo màu sắc ngẫu nhiên */
+        function randomColor() {
+            var colors = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388']
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        /* Tạo các hạt ngẫu nhiên */
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.background = randomColor();
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+
+        }
+
+        const border = document.querySelector('.border');
+
+        function toggleBorder() {
+            border.classList.toggle('active');
+        }
+
+        setInterval(toggleBorder, 5000);
+    </script>
+    <!--viem-->
+    <div class="border"></div>
+    </head>
+
+    <body>
+
+
+        <!-- mây -->
+        <div class="sky">
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+        </div>
+
+        <div id="main">
+            <div class="header">
+                <p class="gioithieu gioithiu">
+                    Ngành công nghệ thông tin (CNTT) là lĩnh vực nghiên cứu, thiết kế, phát triển, triển khai và quản lý
+                    các hệ thống thông tin, bao gồm phần mềm, phần cứng và mạng máy tính. CNTT đóng vai trò quan trọng
+                    trong nền kinh tế hiện đại vì các ứng dụng CNTT có thể được áp dụng trong nhiều lĩnh vực khác nhau,
+                    từ sản xuất, thương mại, tài chính, y tế, giáo dục cho đến giải trí.
+                </p>
+
+                <p class="gioithieu gioithiu">
+                    Các lĩnh vực chính của CNTT bao gồm:
+                </p>
+
+                <p class="gioithieu gioithiu">
+                    1. Phát triển phần mềm: tập trung vào việc thiết kế, phát triển và triển khai các ứng dụng phần mềm.
+                </p>
+                <p class="gioithieu gioithiu">
+
+                    2.Khoa học máy tính: tập trung vào nghiên cứu các thuật toán, lý thuyết và công cụ để xử lý dữ liệu
+                    và giải quyết các vấn đề tính toán phức tạp.
+                </p>
+                <p class="gioithieu gioithiu">
+
+                    3.Mạng máy tính: tập trung vào thiết kế, triển khai và quản lý các hệ thống mạng máy tính.
+                </p>
+                <p class="gioithieu gioithiu">
+
+                    4.An ninh mạng: tập trung vào bảo vệ các hệ thống và dữ liệu trên mạng máy tính khỏi các mối đe dọa
+                    từ bên ngoài.
+                </p>
+                <p class="gioithieu gioithiu">
+
+                    5.Truyền thông đa phương tiện: tập trung vào thiết kế và phát triển các ứng dụng liên quan đến đa
+                    phương tiện, chẳng hạn như video, âm thanh và hình ảnh.
+                </p>
+
+                <p class="gioithieu gioithiu">
+                    Các chuyên gia CNTT có thể làm việc trong các công ty công nghệ thông tin, doanh nghiệp, tổ chức phi
+                    lợi nhuận hoặc chính phủ. Các vị trí công việc trong CNTT bao gồm nhà phát triển phần mềm, chuyên
+                    gia mạng, chuyên gia bảo mật, quản trị viên hệ thống, nhà thiết kế trang web, chuyên viên dữ liệu và
+                    nhiều vị trí khác.
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="content">
+                <br><br><br><br><br>
+                <!--ảnh va chu -->
+                <div class="image-grid">
+                    <div class="text-wrapper">
+                        <h2 class="td">Phát triển phần mềm</h2>
+                        <p class="vb"> tập trung vào việc thiết kế, phát triển và triển khai các ứng dụng phần mềm.</p>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="/img/ptpm.jpg" alt="Description of the image">
+                        <img src="/img/ptpm1.jpg" alt="Description of the image">
+                        <img src="/img/ptpm2.jpg" alt="Description of the image">
+                    </div>
+                </div>
+
+
+                <br><br><br><br><br>
+                <!--ảnh va chu -->
+                <div class="image-grid">
+                    <div class="text-wrapper">
+                        <h2 class="td">Khoa học máy tính</h2>
+                        <p class="vb"> tập trung vào nghiên cứu các thuật toán, lý thuyết và công cụ để xử lý dữ liệu và
+                            giải quyết các vấn đề tính toán phức tạp. </p>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="/img/khmt.jpg" alt="Description of the image">
+                        <img src="/img/khmt1.jpg" alt="Description of the image">
+                        <img src="/img/khmt2.jpg" alt="Description of the image">
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br>
+            <!--ảnh va chu -->
+            <div class="image-grid">
+                <div class="text-wrapper">
+                    <h2 class="td">Mạng máy tính</h2>
+                    <p class="vb"> tập trung vào thiết kế, triển khai và quản lý các hệ thống mạng máy tính. </p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="/img/mạng máy tính.jpg" alt="Description of the image">
+                    <img src="/img/mạng máy tính 1.jpg" alt="Description of the image">
+                    <img src="/img/mạng máy tính 2.jpg" alt="Description of the image">
+                </div>
+            </div>
+        </div>
+
+
+        <br><br><br><br><br>
+        <!--ảnh va chu -->
+        <div class="image-grid">
+            <div class="text-wrapper">
+                <h2 class="td">An ninh mạng</h2>
+                <p class="vb"> tập trung vào bảo vệ các hệ thống và dữ liệu trên mạng máy tính khỏi các mối đe dọa từ
+                    bên ngoài. </p>
+            </div>
+            <div class="image-wrapper">
+                <img src="/img/an ninih m ạng.jpg" alt="Description of the image">
+                <img src="/img/an ninh mạng 1.jpg" alt="Description of the image">
+                <img src="/img/an ninh mạng 2.png" alt="Description of the image">
+            </div>
+        </div>
+        </div>
+
+
+
+        <br><br><br><br><br>
+        <!--ảnh va chu -->
+        <div class="image-grid">
+            <div class="text-wrapper">
+                <h2 class="td">Truyền thông đa phương tiện</h2>
+                <p class="vb"> tập trung vào thiết kế và phát triển các ứng dụng liên quan đến đa phương tiện, chẳng hạn
+                    như video, âm thanh và hình ảnh </p>
+            </div>
+            <div class="image-wrapper">
+                <img src="/img/truyền thông đa phương tiện.jpg" alt="Description of the image">
+                <img src="/img/truyền thông đa phướng tiện 1.jpg" alt="Description of the image">
+                <img src="/img/truyề thôgn đa phương tiện 2.jpg" alt="Description of the image">
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+            
+        </div>
+        </div>
+    </body>
+
+</html>

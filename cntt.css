@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #060606;
+}
+
+.border {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.border:before,
+.border:after {
+    content: "";
+    position: absolute;
+    width: calc(100%);
+    height: calc(100%);
+    border: 1px solid transparent;
+    pointer-events: none;
+}
+
+.border:before {
+    top: 0;
+    left: 0;
+    border-top-color: #56dced;
+    border-left-color: #43ffff;
+    transition: border-top-color 1s ease, border-left-color 1s ease;
+}
+
+.border:after {
+    bottom: 0;
+    right: 0;
+    border-bottom-color: #f65c41;
+    border-right-color: #f9be35;
+    transition: border-bottom-color 1s ease, border-right-color 1s ease;
+}
+
+.border.active:before {
+    border-top-color: #ff44dd;
+    border-left-color: #e83bff;
+}
+
+.border.active:after {
+    border-bottom-color: #e8ff1d;
+    border-right-color: #eeff38;
+}
+
+/* mây */
+.sky {
+    position: relative;
+    width: 100%;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 150px;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: moveCloud 20s linear infinite;
+    animation-delay: -5s;
+    box-shadow: 0 0 50px 20px #333;
+}
+
+.cloud:nth-child(2) {
+    width: 500px;
+    height: 200px;
+    animation-duration: 25s;
+    animation-direction: reverse;
+}
+
+.cloud:nth-child(3) {
+    width: 450px;
+    height: 170px;
+    animation-duration: 18s;
+}
+
+.rain {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 2px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: fallRain 1s linear infinite;
+}
+
+@keyframes moveCloud {
+    0% {
+        left: -200px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes fallRain {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(500px);
+    }
+}
+
+.header {
+    margin: 120px;
+}
+
+.gioithieu {
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-shadow: -1px 0 5px CYAN, 0 1px 5px RED, 1px 0 5px CYAN, 0 -1px 5px RED;
+}
+
+.gioithiu {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ảnh va chu */
+.image-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    /* tùy chỉnh độ rộng tối đa của phần tử cha */
+    margin: 0 auto;
+
+}
+
+.text-wrapper {
+    flex: 1;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.image-wrapper {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+img:first-child {
+    margin-right: 10px;
+}
+
+img:last-child {
+    margin-left: 10px;
+}
+
+.td {
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    text-shadow: 1px 1px 0 #fff;
+ 
+    transition: color 1s ease-in-out, transform 1s ease-in-out, box-shadow 1s ease-in-out, border 1s ease-in-out;
+}
+.vb:hover,
+.td:hover {
+    color: #f7f7f7;
+    border: none;
+    
+}
+
+.vb {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    text-shadow: 1px 1px 0 #333s;
+ 
+    transition: color 1s ease-in-out, transform 1s ease-in-out, box-shadow 1s ease-in-out, border 1s ease-in-out;
+   
+}

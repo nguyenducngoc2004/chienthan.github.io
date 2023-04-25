@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="baigiuaky.css">
+    <link rel="stylesheet" href="respntive.css">
+    <title>ceo . ndn </title>
+    <style type="text/css">
+        /* Định dạng background */
+
+
+        /* Định dạng hiệu ứng */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Định dạng hạt */
+        .particle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            -webkit-animation: particle 2s ease-in-out;
+            animation: particle 2s ease-in-out;
+            cursor: pointer;
+        }
+
+
+
+        /* Khai báo keyframes cho animation */
+        @-webkit-keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(100vw, 100vh);
+                transform: translate(100vw, 100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <h2><a class="active" href="#">ceo.ndn</a></h2>
+  
+        <div>
+          <ul id="navbar">
+            <li><a class="active" href="#">Trang chủ</a></li>
+            <li><a href="#">L</a></li>
+            <li><a href="#">O</a></li>
+            <li><a href="#">V</a></li>
+            <li><a href="#">E</a></li>
+          </ul>
+        </div>
+        
+      </section>
+
+    <div id="particles"></div>
+    <!-- Nội dung trang web của bạn ở đây -->
+
+    <script type="text/javascript">
+        // Tạo các hạt ngẫu nhiên
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+        }
+
+        // Tạo hạt mới sau mỗi 0.1ms
+        setInterval(createParticle, 50);
+
+        /* Hàm tạo màu sắc ngẫu nhiên */
+        function randomColor() {
+            var colors = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388']
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        /* Tạo các hạt ngẫu nhiên */
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.background = randomColor();
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+
+        }
+
+        const border = document.querySelector('.border');
+
+        function toggleBorder() {
+            border.classList.toggle('active');
+        }
+
+        setInterval(toggleBorder, 5000);
+    </script>
+    <!-- trên là phần brody mọi trang -->
+    <!--day la viem -->
+    <div class="border"></div>
+    <!-- anh dai dien -->
+    <p align="left"><img
+            src="https://freenice.net/wp-content/uploads/2021/04/anh-co-gai-buon-quay-lung-nhin-ve-thanh-pho.jpg"
+            class="anhdaidien"></p>
+    <h2 class="namengoc">
+        <div align="center" id="username" style="font-family: pattaya;">
+            <p class="ndn">Nguyễn Đức Ngọc </p>
+        </div>
+    </h2>
+
+    <h2 class="tieusu" style="font-family: potta One;">
+        <p class="ten"> xin chao. toi sinh năm 2004</p>
+        <br>
+        <p class="noisinh">toi đến từ <a class="truong" href="http://127.0.0.1:5500/hanoi.html">Hà Nội</a></p>
+        <br>
+        <p class="dainam">hiện tại tôi đang là sinh viên của <a class="truong"
+                href="https://www.dainam.edu.vn/vi">trường đại học đại nam</a> </p>
+        <br>
+        <p class="nganh "> và ngành mà tôi đang theo đuổi là ngành <a class="truong" href="http://127.0.0.1:5500/cntt.html">Công Nghệ Thông Tin </a>
+        </p>
+        <br>
+        <hr>
+    </h2>
+    <p class="sothich">sở thích </p>
+
+    <br><br><br>
+
+    <div class="image-gallery">
+        <div id="border1" class="image-container">
+            <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2022/07/23-2.jpg" alt="Image 1">
+            <div class="caption">aov</div>
+        </div>
+        <div id="border1" class="image-container">
+            <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2022/07/6-9.jpg" alt="Image 2">
+            <div class="caption">tik of titan</div>
+        </div>
+        <div id="border1" class="image-container">
+            <img src="https://cdn.sforum.vn/sforum/wp-content/uploads/2022/07/15-7.jpg" alt="Image 3">
+            <div class="caption">alike or lau </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="cuoi trang">
+        <p class="ngocceo">
+            <p1 class="rainbow italic">
+                created by :@ceo.ndnCNTT16-03...
+            </p1>
+        </p>    
+    </div>
+   
+    <script type="text/javascript">var fps = document.getElementById("fps");var startTime = Date.now();var frame = 0;function tick(){var time = Date.now();frame++;if(time - startTime > 1000){fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);startTime = time;frame = 0;}window.requestAnimationFrame(tick);}tick();</script>
+</div>
+<script>
+    function updateCounter() {
+fetch('https://api.countapi.xyz/update/uimonk/youtubechannel/?amount=1')
+.then(res => res.json())
+.then(data => counterElement.innerHTML = data.value)
+}
+updateCounter()
+counterElement = document.getElementsByClassName('count')[0];
+const TEST_AUDIO =
+"https://thanhdieulua.ml/dulieu-thanhdieu/Inova.mp3";
+const audio = new Audio(TEST_AUDIO);
+console.log(audio);
+audio.addEventListener("loadedmetadata", () => {
+console.log(audio.duration);
+console.log(audio.currentTime);
+});
+const a = audio.addEventListener("timeupdate", () => {
+// console.log("time:", audio.currentTime);
+});
+console.log("a:", a);
+audio.play();
+ThanhDieu();
+function ThanhDieu() {
+Swal.fire({
+imageUrl: 'assets/sticker.gif',
+imageWidth: 400,
+imageHeight: 250,
+
+})
+}
+</script>
+
+</script>
+    
+
+</body>
+
+</html>
